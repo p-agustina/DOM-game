@@ -23,33 +23,36 @@ function displayWord(wordsArr) {
 //3rd check if article is das, die or der
 // hacer un array de articulos y comparar
 
-function updateScore() {
+// function updateScore() {
 
-  let displayedScore = document.querySelector(".score").value
+//   let displayedScore = document.querySelector(".score").value
 
-  displayedScore = score
+//   displayedScore = score
   
-  return displayedScore
+//   return displayedScore
   
-  console.log(displayedScore)
+//   console.log(displayedScore)
  
- }
+//  }
 
 
 function whichArticle(e) {
   
   if(e.target.innerText == "DIE" && randomPair.article === "die") {
     score += 10
-    updateScore()
+    
 } 
 else if (e.target.innerText == "DER" && randomPair.article === "der") {
   score += 10
-  updateScore()
+  
 }
 else if (e.target.innerText == "DAS" && randomPair.article === "das") {
   score += 10
-  updateScore()
+  
 }
+
+document.querySelector(".score").innerHTML = score
+
 console.log(score)
       
 }
