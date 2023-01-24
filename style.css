@@ -1,0 +1,55 @@
+body {
+    margin: auto;
+}
+
+#score-div {
+    margin: 3rem 3rem;
+    font-size: 1.5rem;
+}
+
+
+
+#container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 10rem;
+}
+
+#buttons-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+button {
+    font-size: 3rem;
+    margin: 1rem;
+    padding: 1rem;
+    width: 100%;
+    cursor: pointer;
+}
+
+#word-container {
+    box-shadow: 7px 7px 10px lightgray;
+    padding: 8rem 16rem;
+    font-size: 3rem;
+    background-color: #fffffc;
+background-image: url("https://www.transparenttextures.com/patterns/lined-paper.png");
+
+}
+
+#start-div {
+    width: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#start-btn {
+    margin: 10rem 0rem;
+    padding: 2rem;
+    width: auto;
+    cursor: pointer;
+}
