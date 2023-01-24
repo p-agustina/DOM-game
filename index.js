@@ -7,60 +7,40 @@ let wordsArr = [
 ]
 
 let score = 0
+let randomPair = {}
 
 //1st choose a random pair from the array
   
-let randomPair = wordsArr[Math.floor(Math.random() * wordsArr.length)]
 
 //2nd display only the word in the box
 
-function displayWord(wordsArr) {
- 
-     document.querySelector("#word-container").innerText = randomPair.word
+function displayWord() {
+    randomPair =  wordsArr[Math.floor(Math.random() * wordsArr.length)];
+    document.querySelector("#word-span").innerText = randomPair.word;
 
 }
 
 //3rd check if article is das, die or der
 // hacer un array de articulos y comparar
 
-// function updateScore() {
-
-//   let displayedScore = document.querySelector(".score").value
-
-//   displayedScore = score
-  
-//   return displayedScore
-  
-//   console.log(displayedScore)
- 
-//  }
-
-
 function whichArticle(e) {
-  
-  if(e.target.innerText == "DIE" && randomPair.article === "die") {
-    score += 10
-    
-} 
-else if (e.target.innerText == "DER" && randomPair.article === "der") {
-  score += 10
-  
-}
-else if (e.target.innerText == "DAS" && randomPair.article === "das") {
-  score += 10
-  
-}
+  let article = e.target.innerText
+  randomArt = randomPair.article.toUpperCase()
+  let targetBtn = e.target
 
-document.querySelector(".score").innerHTML = score
-
-console.log(score)
+  if (article === randomArt) {
+      score +=10;
+      targetBtn.style.background='green';
+      document.getElementById("empty-span").innerHTML = randomPair.article;
+      setTimeout(displayWord, 3000);
+  }
+  else {
+      score -= 10;
+      targetBtn.style.background='red';
       
+  }
+  document.querySelector(".score").innerHTML = score;
 }
-
-
-
-
-
 
 
 //4th if das/der/die return score += 100 && display "correct"
