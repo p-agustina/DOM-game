@@ -19,6 +19,18 @@ function displayWord() {
     document.querySelector("#word-span").innerText = randomPair.word;
 
 }
+//write a function to reset the word container after guessing correctly
+
+
+function reset() {
+  document.getElementById("empty-span").innerHTML = "_ _ _";
+  document.getElementById("word-span").innerHTML = " ";
+  // document.getElementById("buttons-container").getElementsByTagName("button").style.background="gray"
+  document.getElementById("die-btn").style.background="none";
+  document.getElementById("der-btn").style.background="none";
+  document.getElementById("das-btn").style.background="none";
+
+}
 
 //3rd check if article is das, die or der
 // hacer un array de articulos y comparar
@@ -32,7 +44,8 @@ function whichArticle(e) {
       score +=10;
       targetBtn.style.background='green';
       document.getElementById("empty-span").innerHTML = randomPair.article;
-      setTimeout(displayWord, 3000);
+      setTimeout(reset, 2000);
+      setTimeout(displayWord, 2000);
   }
   else {
       score -= 10;
@@ -40,7 +53,18 @@ function whichArticle(e) {
       
   }
   document.querySelector(".score").innerHTML = score;
+  endGame()
 }
+
+function endGame() {
+  if (score >= 100) alert("You won!");
+  else if (score < -100) alert("Loser!")
+
+}
+
+
+
+
 
 
 //4th if das/der/die return score += 100 && display "correct"
