@@ -9,11 +9,15 @@
     
 </head>
 <body>
-    <!-- <h1>GRAMMAR NIGHTMARE</h1> -->
+    <!-- <div id="startScreen">
+<h1>GRAMMAR NIGHTMARE</h1>
+<p>Game description</p>
+<input id="StartButton" type="button" value="Start"/>
+</div> -->
     <div id="score-div"><h2>Score: <span class="score">0</span></h2></div>
     <div id="container">
         <div id="buttons-container">
-            <button id="die-btn">DIE</button>
+            <button id="die-btn">DIE</button>         
             <button id="der-btn">DER</button>
             <button id="das-btn">DAS</button>
         </div>
@@ -21,9 +25,9 @@
         <div id="word-container"><span id="empty-span">_ _ _</span><span id="word-span"></span></div>
     </div>
 
-    <div id="start-div"><button id="start-btn">GET WORD</button></div>
+    <div id="start-div"><button class="start-btn">GET WORD</button></div>
 
-    
+    <script src="./data.js"></script>
     <script src="./index.js"></script>
     
 </body>

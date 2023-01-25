@@ -1,11 +1,34 @@
+/* sombra del boton: #a03f3a */
+/* orange color: #F06449 */
+/* negro pizarra: #36382E */
+/* background: #EDE6E3 */
+
+@import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Lucida+Sans+Typewriter&display=swap");
+
 body {
     margin: auto;
-} 
+    background-color: #EDE6E3;
+    width: 80vw;
+    height: 80vw;
+}
 
 h1 {
     text-align: center;
     margin-top: 2rem;
     font-size: 4rem;
+    font-family: 'Fredericka the Great', cursive;
+}
+
+img {
+    width: 30%;
+}
+
+p {
+    font-family: 'Fredericka the Great', cursive;
+    font-size: 2rem;
+    font-weight: bold;
+
 }
 
 #score-div {
@@ -13,6 +36,7 @@ h1 {
     font-size: 1.5rem;
     display: flex;
     justify-content: center;
+    font-family: 'Fredericka the Great', cursive;
 }
 
 #container {
@@ -20,7 +44,8 @@ h1 {
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    margin-top: 10rem;
+    margin-top: 3rem;
+    
 }
 
 #buttons-container {
@@ -32,25 +57,36 @@ h1 {
 }
 
 button {
-    font-size: 3rem;
+    font-size: 2rem;
     margin: 1rem;
     padding: 1rem;
     width: 100%;
     cursor: pointer;
-    background: none;
+    background-color: #36382E;
+    color: white;
+    transition-duration: 0.4s;
+    border-radius: 0.25rem;
+
 }
+
+#die-btn:hover, #der-btn:hover, #das-btn:hover {
+    background-color: white;
+    color: #36382E;
+  }
 
 #word-container {
     box-shadow: 7px 7px 10px lightgray;
     padding: 8rem 16rem;
-    font-size: 3rem;
+    font-size: 2rem;
+    font-family: 'Lucida Sans Typewriter', monospace;
     background-color: #fffffc;
     background-image: url("https://www.transparenttextures.com/patterns/lined-paper.png");
     margin-left: 5rem;
+    
 }
 
 #word-container > span {
-    margin: 1rem;
+    margin: 0.5rem;
 }
 
 #start-div {
@@ -58,10 +94,61 @@ button {
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
+    margin-top: 1rem;
 }
-#start-btn {
-    margin: 7rem 0rem;
-    padding: 2rem;
+
+.start-btn {
+    margin: 4rem 0rem;
+    padding: 2rem 4rem;
     width: auto;
     cursor: pointer;
+    display: block;
+    position: relative;
+    color:white;
+    font-family:Helvetica, sans-serif;
+    font-weight:bold;
+    font-size:36px;
+    text-align: center;
+    text-decoration:none;
+    background-color:#F06449;
+    border: solid #a03f3a;
+
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    text-shadow: 0px 1px 0px #000;
+    filter: dropshadow(color=#000, offx=0px, offy=1px);
+  
+    -webkit-box-shadow:inset 0 1px 0 #FFE5C4, 0 10px 0 #a03f3a;
+    -moz-box-shadow:inset 0 1px 0 #FFE5C4, 0 10px 0 #a03f3a;
+    box-shadow:inset 0 1px 0 #FFE5C4, 0 10px 0 #a03f3a;
+  
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
 }
+.start-btn:active{
+    top:10px;
+    background-color:#df513c;
+    
+    -webkit-box-shadow:inset 0 1px 0 #FFE5C4, inset 0 -3px 0 #96483a;
+    -moz-box-shadow:inset 0 1px 0 #FFE5C4, inset 0 -3pxpx 0 #96483a;
+    box-shadow:inset 0 1px 0 #FFE5C4, inset 0 -3px 0 #96483a;
+  }
+  
+  .start-div:after{
+    content:"";
+    height:100%;
+    width:100%;
+    padding:4px;
+    position: absolute;
+    bottom:-15px;
+    left:-4px;
+    z-index:-1;
+    background-color:none;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+  }
+
+  @import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap');
+  @import url("https://fonts.googleapis.com/css2?family=Lucida+Sans+Typewriter&display=swap");
