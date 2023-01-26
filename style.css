@@ -133,7 +133,10 @@ button {
 
 #word-container {
     box-shadow: 7px 7px 10px lightgray;
-    padding: 8rem 16rem;
+    padding: 8rem 8rem;
+    width: 450px;
+    display: flex;
+    justify-content: center;    
     font-size: 2rem;
     font-family: 'Lucida Sans Typewriter', monospace;
     background-color: #fffffc;
