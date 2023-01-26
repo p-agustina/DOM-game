@@ -1,17 +1,62 @@
 /* sombra del boton: #a03f3a */
 /* orange color: #F06449 */
 /* negro pizarra: #36382E */
-/* background: #EDE6E3 */
+/* background:  */
 
 @import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap');
 @import url("https://fonts.googleapis.com/css2?family=Lucida+Sans+Typewriter&display=swap");
 
 body {
-    margin: auto;
+    margin: 0 auto;
     background-color: #EDE6E3;
     width: 80vw;
     height: 80vw;
 }
+
+.loser-popup {
+    width: 25rem;
+    height: 20rem;
+    background: #36382E;
+    color: white;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.1);
+    padding: 0 30px 30px;
+    text-align: center;
+    border: solid 0.05rem black;
+    visibility: hidden;
+    transition: transform 0.4s, top 0.4;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.loser-popup img {
+    width: 10rem;
+    margin-top: -5rem;
+}
+
+.loser-popup h2 {
+
+}
+ .loser-popup button {
+    width: 100%;
+    margin-top: 2rem;
+    padding: 1rem 0;
+    background: #F06449;
+    color: white;
+    border: 0;
+    outline: none;
+    
+ }
+
+ .open-popup {
+    visibility: visible;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(1);
+ }
 
 h1 {
     text-align: center;
@@ -20,15 +65,22 @@ h1 {
     font-family: 'Fredericka the Great', cursive;
 }
 
-img {
-    width: 30%;
-}
-
 p {
     font-family: 'Fredericka the Great', cursive;
     font-size: 2rem;
     font-weight: bold;
+    text-align: center;
 
+}
+
+a{
+    color: white;
+    text-decoration: none;
+}
+
+#start-game {
+    display: flex;
+    justify-content: center;
 }
 
 #score-div {
@@ -82,11 +134,13 @@ button {
     background-color: #fffffc;
     background-image: url("https://www.transparenttextures.com/patterns/lined-paper.png");
     margin-left: 5rem;
+    display: flex;
     
 }
 
 #word-container > span {
     margin: 0.5rem;
+   
 }
 
 #start-div {

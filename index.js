@@ -1,47 +1,3 @@
-// let wordsArr = [
-//   {word: "Bad", article: "das"},
-//   {word: "Küche", article: "die"},
-//   {word: "Floor", article: "der"},
-//   {word: "Kartoffel", article: "die"},
-//   {word: "Käse", article: "der"},
-//   {word: "Buch", article: "das"},
-//   {word: "Apfel", article: "der"},
-//   {word: "Sofa", article: "das"},
-//   {word: "Vase", article: "die"},
-//   {word: "Vogel", article: "der"},
-//   {word: "Hund", article: "das"},
-//   {word: "Maus", article: "die"},
-//   {word: "Regenschirm", article: "der"},
-//   {word: "Kind", article: "das"},
-//   {word: "Flasche", article: "die"},
-//   {word: "Zug", article: "der"},
-//   {word: "Bild", article: "das"},
-//   {word: "Musik", article: "die"},
-//   {word: "Hut", article: "der"},
-//   {word: "Auto", article: "das"},
-//   {word: "Tasse", article: "die"},
-//   {word: "Tisch", article: "der"},
-//   {word: "Haus", article: "das"},
-//   {word: "Katze", article: "die"},
-//   {word: "Stuhl", article: "der"},
-//   {word: "Fenster", article: "das"},
-//   {word: "Tür", article: "die"},
-//   {word: "Baum", article: "der"},
-//   {word: "Auto", article: "das"},
-//   {word: "Lampe", article: "die"},
-//   {word: "Computer", article: "der"},
-//   {word: "Telefon", article: "das"},
-//   {word: "Uhr", article: "die"},
-//   {word: "Rose", article: "die"}
-//   ]
-  
-// import {wordsArr} from './data.js';
-
-
-const [wordsArr] = require("./data.js");
-   
-
-
 let score = 0
 let randomPair = {}
 
@@ -55,14 +11,15 @@ function displayWord() {
 
 //write a function to reset the word container and the buttons after guessing correctly
 
-
 function reset() {
   document.getElementById("empty-span").innerHTML = "_ _ _";
   document.getElementById("word-span").innerHTML = " ";
-  // document.getElementById("buttons-container").getElementsByTagName("button").style.background="gray"
   document.getElementById("die-btn").style.background="#36382E";
   document.getElementById("der-btn").style.background="#36382E";
   document.getElementById("das-btn").style.background="#36382E";
+  document.getElementById("die-btn").innerText = "DIE"
+  document.getElementById("der-btn").innerText = "DER"
+  document.getElementById("das-btn").innerText = "DAS"
 
 }
 
@@ -77,6 +34,7 @@ function whichArticle(e) {
   if (article === randomArt) {
       score +=10;
       targetBtn.style.background='green';
+      targetBtn.innerHTML = "&#10004"
       document.getElementById("empty-span").innerHTML = randomPair.article;
       setTimeout(reset, 1500);
       setTimeout(displayWord, 1500);
@@ -89,19 +47,30 @@ function whichArticle(e) {
   endGame()
 }
 
+//add function for message when winning/losing
+
+let popup = document.querySelector(".loser-popup");
+function openLoserPopup() {
+  popup.classList.add("open-popup");
+  // document.querySelector(".loser-popup").style.display = "block";
+}
+
+function closePopup() {
+  popup.classList.remove("open-popup");
+}
 //add a function that ends the game when a certain score is reached
 
 function endGame() {
-  // const image = document.createElement("img")
-  // image.src = "/assets/Daco_4062401.png"
-
-  if (score >= 10) {
+  
+  if (score >= 100) {
     document.getElementById("word-container").innerHTML = "You are now basically fluent in german!"
   }
   else if (score <= -10) {
     document.getElementById("word-container").innerHTML = "You lost";
-    // document.getElementById("word-container").appendChild(image);
-    }  
+    openLoserPopup()
+    // reset()
+    
+    }
 
 
 }
@@ -119,7 +88,7 @@ window.addEventListener('load', () => {
     derButton.addEventListener("click", (e) => whichArticle(e))
     const dasButton = document.querySelector("#das-btn");
     dasButton.addEventListener("click", (e) => whichArticle(e))
-
-  
     
   })
+
+ 
