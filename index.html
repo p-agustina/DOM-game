@@ -9,11 +9,17 @@
     
 </head>
 <body>
-    <div class="loser-popup">
+    <div id="winner-popup" class="popup" onclick="">
+        <img src="./assets/PngItem_2580201.png">
+        <h2>You're now basically fluent in german!</h2>
+        <button type="button" onclick="closePopup()">PLAY AGAIN</button>
+    </div>
+    <div id="loser-popup" class="popup" onclick="">
             <img src="./assets/78trnr.png">
             <h2>BUUUUUU! You should practice more often.</h2>
             <button type="button" onclick="closePopup()">TRY AGAIN</button>
     </div>
+
     <div id="score-div"><h2>Score: <span class="score">0</span></h2></div>
     <div id="container">
         <div id="buttons-container">

@@ -49,30 +49,32 @@ function whichArticle(e) {
 
 //add function for message when winning/losing
 
-let popup = document.querySelector(".loser-popup");
-function openLoserPopup() {
-  popup.classList.add("open-popup");
-  // document.querySelector(".loser-popup").style.display = "block";
+let loserPopup = document.querySelector("#loser-popup");
+let winnerPopup = document.querySelector("#winner-popup");
+
+  function openWinnerPopup() {
+    winnerPopup.classList.add("open-winner-popup");
+    document.querySelector("#winner-popup").style.display = "block";
+  }
+  function openLoserPopup() {
+  loserPopup.classList.add("open-loser-popup");
+  document.querySelector("#loser-popup").style.display = "block";
 }
 
 function closePopup() {
-  popup.classList.remove("open-popup");
+  window.location.href = "./index.html"
 }
+
 //add a function that ends the game when a certain score is reached
 
 function endGame() {
   
-  if (score >= 100) {
-    document.getElementById("word-container").innerHTML = "You are now basically fluent in german!"
+  if (score >= 10) {
+    openWinnerPopup()    
   }
-  else if (score <= -10) {
-    document.getElementById("word-container").innerHTML = "You lost";
-    openLoserPopup()
-    // reset()
-    
+  else if (score <= -100) {
+    openLoserPopup()     
     }
-
-
 }
 
 
@@ -83,7 +85,6 @@ window.addEventListener('load', () => {
 
     const dieButton = document.querySelector("#die-btn");
     dieButton.addEventListener("click", (e) => whichArticle(e));
-    // .addEventListener("keypress", myScript);
     const derButton = document.querySelector("#der-btn");
     derButton.addEventListener("click", (e) => whichArticle(e))
     const dasButton = document.querySelector("#das-btn");

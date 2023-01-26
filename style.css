@@ -10,10 +10,10 @@ body {
     margin: 0 auto;
     background-color: #EDE6E3;
     width: 80vw;
-    height: 80vw;
+    /* height: 80vw; */
 }
 
-.loser-popup {
+.popup {
     width: 25rem;
     height: 20rem;
     background: #36382E;
@@ -33,15 +33,15 @@ body {
     align-items: center;
 }
 
-.loser-popup img {
+.popup img {
     width: 10rem;
     margin-top: -5rem;
 }
 
-.loser-popup h2 {
+.popup h2 {
 
 }
- .loser-popup button {
+ .popup button {
     width: 100%;
     margin-top: 2rem;
     padding: 1rem 0;
@@ -51,8 +51,13 @@ body {
     outline: none;
     
  }
+ .open-winner-popup {
+    visibility: visible;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(1);
+ }
 
- .open-popup {
+ .open-loser-popup {
     visibility: visible;
     top: 50%;
     transform: translate(-50%, -50%) scale(1);
