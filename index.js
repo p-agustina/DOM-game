@@ -35,7 +35,7 @@ function whichArticle(e) {
   let targetBtn = e.target
 
   if (article === randomArt) {
-      score +=10;
+      score += 10;
       targetBtn.style.background='green';
       targetBtn.innerHTML = "&#10004"
       document.getElementById("empty-span").innerHTML = randomPair.article;
@@ -72,7 +72,7 @@ function closePopup() {
 
 function endGame() {
   
-  if (score >= 10) {
+  if (score >= 100) {
     openWinnerPopup()    
   }
   else if (score <= -100) {
