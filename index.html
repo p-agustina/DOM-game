@@ -4,39 +4,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>grammar nightmare</title>
-    <link rel="stylesheet" href="style.css">
-    
+    <title>Splash Screen</title>
+    <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    <div id="winner-popup" class="popup" onclick="">
-        <img src="./assets/PngItem_2580201.png">
-        <h2>You're now basically fluent in german!</h2>
-        <button type="button" onclick="closePopup()">PLAY AGAIN</button>
-    </div>
-    <div id="loser-popup" class="popup" onclick="">
-            <img src="./assets/78trnr.png">
-            <h2>BUUUUUU! You should practice more often.</h2>
-            <button type="button" onclick="closePopup()">TRY AGAIN</button>
+    <h1>GRAMMAR NIGHTMARE</h1>
+    <div class="paragraph">
+        <p>
+            Welcome to the nightmare that is guessing what's the right article in german! To start, ask for a new word and then follow your heart to find the right article.
+        </p>
     </div>
 
-    <div id="score-div"><h2>Score: <span class="score">0</span></h2></div>
-    <div id="container">
-        <div id="buttons-container">
-            <button id="die-btn">DIE</button>         
-            <button id="der-btn">DER</button>
-            <button id="das-btn">DAS</button>
-        </div>
-        
-        <div id="word-container"><span id="empty-span">_ _ _</span><span id="word-span"></span></div>
-    </div>
-
-    <div id="start-div"><button class="start-btn">GET WORD</button></div>
-
-    <script src="./data.js"></script>
-    <script src="./index.js"></script>
-
-    <!-- <a href="https://imgflip.com/i/78trnr"><img src="https://i.imgflip.com/78trnr.jpg" title="made at imgflip.com"/></a><div><a href="https://imgflip.com/memegenerator">from Imgflip Meme Generator</a></div> -->
-    
+    <div id="start-game"><button class="start-btn"><a href="./game.html">START</a></button></div>
 </body>
 </html>

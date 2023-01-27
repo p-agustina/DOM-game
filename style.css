@@ -39,9 +39,14 @@ body {
 }
 
 .popup h2 {
+    font-family: 'Fredericka the Great', cursive;
+    font-size: 2rem;
+    font-weight: lighter;
 
 }
- .popup button {
+
+
+ .popup-button {
     width: 100%;
     margin-top: 2rem;
     padding: 1rem 0;
@@ -68,13 +73,22 @@ h1 {
     margin-top: 2rem;
     font-size: 4rem;
     font-family: 'Fredericka the Great', cursive;
+    margin-bottom: 8rem;
 }
 
+.paragraph {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 3rem;
+}
 p {
     font-family: 'Fredericka the Great', cursive;
     font-size: 2rem;
     font-weight: bold;
     text-align: center;
+    width: 50vw;
+    /* display: flex;
+    justify-content: center; */
 
 }
 
