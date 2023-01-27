@@ -73,13 +73,12 @@ h1 {
     margin-top: 2rem;
     font-size: 4rem;
     font-family: 'Fredericka the Great', cursive;
-    margin-bottom: 8rem;
+    margin-bottom: 5rem;
 }
 
 .paragraph {
     display: flex;
     justify-content: center;
-    margin-bottom: 3rem;
 }
 p {
     font-family: 'Fredericka the Great', cursive;

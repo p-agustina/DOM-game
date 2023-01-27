@@ -17,6 +17,9 @@ function reset() {
   document.getElementById("die-btn").style.background="#36382E";
   document.getElementById("der-btn").style.background="#36382E";
   document.getElementById("das-btn").style.background="#36382E";
+  document.getElementById("die-btn").style.color="white";
+  document.getElementById("der-btn").style.color="white";
+  document.getElementById("das-btn").style.color="white";
   document.getElementById("die-btn").innerText = "DIE"
   document.getElementById("der-btn").innerText = "DER"
   document.getElementById("das-btn").innerText = "DAS"
