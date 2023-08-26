@@ -1,20 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Splash Screen</title>
-    <link rel="stylesheet" href="./style.css">
-</head>
-<body>
-    <h1>GRAMMAR NIGHTMARE</h1>
-    <div class="paragraph">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grammar Nightmare</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div id="start-screen">
+      <h1>GRAMMAR NIGHTMARE</h1>
+      <div class="paragraph">
         <p>
-            Welcome to the nightmare that is guessing what's the right article in german! To start, ask for a new word and then follow your heart to find the right article.
+          Welcome to the nightmare that is guessing what's the right article in
+          German! To start, ask for a new word and then follow your heart to
+          find the right article.
         </p>
+      </div>
+
+      <div id="start-game">
+        <button id="start-btn">START</button>
+      </div>
     </div>
 
-    <div id="start-game"><button class="start-btn"><a href="./game.html">START</a></button></div>
-</body>
+
+    <div id="game-screen">
+        <div id="winner-popup" class="popup" onclick="">
+            <img src="./assets/PngItem_2580201.png">
+            <h2>You're now basically fluent in german!</h2>
+            <button class="popup-button" type="button" onclick="closePopup()">PLAY AGAIN</button>
+        </div>
+        <div id="loser-popup" class="popup" onclick="">
+                <img src="./assets/78trnr.png">
+                <h2>BUUUUUU! You should practice more often.</h2>
+                <button class="popup-button" type="button" onclick="closePopup()">TRY AGAIN</button>
+        </div>
+    
+        <div id="score-div"><h2>Score: <span id="score">0</span></h2></div>
+        <div id="container">
+            <div id="buttons-container">
+                <button id="die">DIE</button>         
+                <button id="der">DER</button>
+                <button id="das">DAS</button>
+            </div>
+            
+            <div id="word-container"><span id="empty-span">_ _ _</span><span id="word-span"></span></div>
+        </div>
+    
+        <div id="start-div"><button class="start-btn">GET WORD</button></div>
+    </div>
+
+    <script src="./js/data.js"></script>
+    <script src="./js/game.js"></script>
+    <script src="./js/script.js"></script>
+  </body>
 </html>

@@ -138,7 +138,7 @@ button {
 
 }
 
-#die-btn:hover, #der-btn:hover, #das-btn:hover {
+#die:hover, #der:hover, #das:hover {
     background-color: white;
     color: #36382E;
   }
@@ -172,7 +172,7 @@ button {
     margin-top: 1rem;
 }
 
-.start-btn {
+#start-btn {
     margin: 4rem 0rem;
     padding: 2rem 4rem;
     width: auto;
@@ -222,6 +222,10 @@ button {
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
     border-radius: 5px;
+  }
+
+  #game-screen {
+    display: none;
   }
 
   @import url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap');
