@@ -48,29 +48,21 @@ class Game {
     this.score += 10;
     button.style.backgroundColor = "green";
     button.innerHTML = "&#10004";
-
+    this.emptySpan.innerHTML = this.randomPair.article;
+    setTimeout(() => {
+        this.reset();
+        this.displayWord();
+    }, 1500);
   }
 
+  handleIncorrectAnswer(button) {
+    this.score -= 10;
+    button.style.backgroundColor = "red";
+  }
 
-
-//     const article = e.target.innerText;
-//     let randomArt = this.randomPair.article.toUpperCase();
-//     let targetBtn = e.target;
-
-//     if (article === randomArt) {
-//       this.score += 10;
-//       targetBtn.style.background = "green";
-//       targetBtn.innerHTML = "&#10004";
-//       this.emptySpan.innerHTML = this.randomPair.article;
-//       setTimeout(() => this.reset(), 1500);
-//       setTimeout(() => this.displayWord(), 1500);
-//     } else {
-//       this.score -= 10;
-//       targetBtn.style.background = "red";
-//     }
-//     this.scoreDisplay.innerHTML = this.score;
-//     this.endGame();
-//   }
+  updateScoreDisplay() {
+    this.scoreDisplay.innerHTML = this.score;
+  }
 
   reset() {
     this.emptySpan.innerHTML = "_ _ _";
@@ -97,9 +89,9 @@ class Game {
   }
 
   endGame() {
-    if (score >= 100) {
+    if (this.score >= 100) {
       this.openWinnerPopup();
-    } else if (score <= -100) {
+    } else if (this.score <= -100) {
       this.openLoserPopup();
     }
   }
