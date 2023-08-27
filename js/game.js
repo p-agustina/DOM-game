@@ -14,6 +14,7 @@ class Game {
 
     this.randomPair = {};
     this.score = 0;
+    this.arrCopie = [...wordsArr]
   }
 
   start() {
@@ -24,9 +25,9 @@ class Game {
   }
 
   displayWord() {
-    let arrCopie = [...wordsArr]
-    this.randomPair = arrCopie[Math.floor(Math.random() * arrCopie.length)];
+    this.randomPair = this.arrCopie[Math.floor(Math.random() * this.arrCopie.length)];
     this.word.innerText = this.randomPair.word;
+    this.arrCopie = this.arrCopie.filter(pair => pair !== this.randomPair)
   }
 
   whichArticle(e) {
